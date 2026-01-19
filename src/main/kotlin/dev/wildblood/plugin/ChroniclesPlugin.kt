@@ -14,4 +14,7 @@ class ChroniclesPlugin(init: JavaPluginInit) : JavaPlugin(init) {
         LOGGER.atInfo().log("Setting up plugin " + this.name)
         this.commandRegistry.registerCommand(ExampleCommand(this.name, this.manifest.version.toString()))
     }
+
+
+
 }
