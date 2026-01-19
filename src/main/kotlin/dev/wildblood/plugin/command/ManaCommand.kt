@@ -66,16 +66,13 @@ class ManaCommand(
 
             context.sendMessage(Message.raw("You have ${manaComponent.currentMana} Mana."))
 
-            /**
             val playerComponent: Player = store.getComponent(ref, Player.getComponentType())!!
             val hudManager = playerComponent.hudManager
 
 
             val manaBar = ManaBar(playerRef)
             hudManager.setCustomHud(playerRef, manaBar)
-            manaBar.updateMana(manaComponent.currentMana / manaComponent.maxMana)
-*/
-
+            //manaBar.updateMana(manaComponent.currentMana / manaComponent.maxMana)
         }
     }
 }

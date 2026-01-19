@@ -27,8 +27,6 @@ class ManaRegenSystem(
 
         manaComponent.currentMana += (manaComponent.regenRate * dt)
             .coerceAtMost(manaComponent.maxMana - manaComponent.currentMana)
-
-        ChroniclesPlugin.LOGGER.atInfo().log("Mana: ${manaComponent.currentMana}")
     }
 
     override fun getQuery(): Query<EntityStore> = query

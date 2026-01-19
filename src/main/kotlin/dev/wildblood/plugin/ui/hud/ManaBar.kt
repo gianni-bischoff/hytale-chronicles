@@ -8,14 +8,14 @@ class ManaBar(playerRef: PlayerRef) : CustomUIHud(playerRef) {
     var manaPercent: Float = 0.0f;
 
     override fun build(builder: UICommandBuilder) {
-        builder.append("#hud-root", "ui/custom/mana/mana.ui");
+        builder.append("Hud/Mana/Mana.ui");
         //builder.set("#health-bar-fill", manaPercent);
     }
 
     fun updateMana(manaPercent: Float) {
         this.manaPercent = manaPercent;
-        //val builder = UICommandBuilder();
-        //builder.set("#health-bar-fill", manaPercent);
-        //update(false, builder);
+        val builder = UICommandBuilder();
+        builder.set("#health-bar-fill", manaPercent);
+        update(false, builder);
     }
 }
