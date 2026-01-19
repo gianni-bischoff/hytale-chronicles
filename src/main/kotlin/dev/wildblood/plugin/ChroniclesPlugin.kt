@@ -24,4 +24,7 @@ class ChroniclesPlugin(init: JavaPluginInit) : JavaPlugin(init) {
 
         LOGGER.atInfo().log("Registered RaceAsset")
     }
+
+
+
 }
