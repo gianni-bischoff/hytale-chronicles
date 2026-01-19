@@ -1,0 +1,36 @@
+$HudResources = "../HudResources.ui";
+$Hotbar = "../Hotbar.ui";
+
+@AdventureIcon = "ManaIcon.png";
+@AdventureBarFill = "ManaBarFill.png";
+@CreativeIcon = "CreativeManaIcon.png";
+@CreativeBarFill = "CreativeManaBarFill.png";
+
+Group {
+  LayoutMode: Bottom;
+  Anchor: (Bottom: $Hotbar.@InventoryClosedContainerMargin + $Hotbar.@HotbarHeight + 6 + 13, Width: $Hotbar.@HotbarWidthHud, Height: 12);
+
+  Group {
+    LayoutMode: Left;
+
+    Group #Icon {
+      Anchor: (Left: 0, Width: 24, Height: 24, Right: 4, Top: -8);
+      Background: @AdventureIcon;
+    }
+
+    Group {
+      Anchor: (Left: 0, Width: 318, Height: 12);
+      Background: "ManaBackground.png";
+
+      ProgressBar #ProgressBar {
+        Anchor: (Width: 318, Height: 12);
+        BarTexturePath: @AdventureBarFill;
+      }
+
+      ProgressBar #ProgressBarEffect {
+        Anchor: (Width: 318, Height: 12);
+        BarTexturePath: "ManaBarEffect.png";
+      }
+    }
+  }
+}

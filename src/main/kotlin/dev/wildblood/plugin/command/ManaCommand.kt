@@ -4,7 +4,6 @@ import com.hypixel.hytale.component.ComponentType
 import com.hypixel.hytale.component.Ref
 import com.hypixel.hytale.component.Store
 import com.hypixel.hytale.server.core.Message
-import com.hypixel.hytale.server.core.command.system.AbstractCommand
 import com.hypixel.hytale.server.core.command.system.CommandContext
 import com.hypixel.hytale.server.core.command.system.arguments.system.RequiredArg
 import com.hypixel.hytale.server.core.command.system.arguments.types.ArgTypes
@@ -14,8 +13,9 @@ import com.hypixel.hytale.server.core.entity.entities.Player
 import com.hypixel.hytale.server.core.universe.PlayerRef
 import com.hypixel.hytale.server.core.universe.world.World
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore
-import com.hypixel.hytale.server.core.util.EventTitleUtil
 import dev.wildblood.plugin.components.ManaComponent
+import dev.wildblood.plugin.ui.hud.ManaBar
+
 
 class ManaCommand(
     manaType: ComponentType<EntityStore, ManaComponent>
@@ -65,6 +65,17 @@ class ManaCommand(
             val manaComponent = store.ensureAndGetComponent(ref, manaType)
 
             context.sendMessage(Message.raw("You have ${manaComponent.currentMana} Mana."))
+
+            /**
+            val playerComponent: Player = store.getComponent(ref, Player.getComponentType())!!
+            val hudManager = playerComponent.hudManager
+
+
+            val manaBar = ManaBar(playerRef)
+            hudManager.setCustomHud(playerRef, manaBar)
+            manaBar.updateMana(manaComponent.currentMana / manaComponent.maxMana)
+*/
+
         }
     }
 }
