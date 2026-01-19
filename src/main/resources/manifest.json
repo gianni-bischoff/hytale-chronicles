@@ -1,14 +1,14 @@
 {
-    "Group": "Example",
-    "Name": "ExamplePlugin",
-    "Version": "0.0.2",
-    "Description": "An example plugin for HyTale!",
+    "Group": "WildBlood",
+    "Name": "Chronicles",
+    "Version": "0.0.1",
+    "Description": "WildBlood Chronicles!",
     "Authors": [
         {
             "Name": "It's you!"
         }
     ],
-    "Website": "example.org",
+    "Website": "wildblood.gg",
     "ServerVersion": "*",
     "Dependencies": {
         
@@ -17,6 +17,6 @@
         
     },
     "DisabledByDefault": false,
-    "Main": "org.example.plugin.ExamplePlugin",
+    "Main": "dev.wildblood.plugin.ChroniclesPlugin",
     "IncludesAssetPack": true
 }
