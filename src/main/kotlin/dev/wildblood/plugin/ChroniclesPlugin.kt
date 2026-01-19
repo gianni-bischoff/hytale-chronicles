@@ -10,7 +10,6 @@ import com.hypixel.hytale.server.core.asset.type.item.config.CraftingRecipe
 import com.hypixel.hytale.server.core.asset.type.item.config.Item
 import com.hypixel.hytale.server.core.plugin.JavaPlugin
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit
-import dev.wildblood.plugin.config.RaceAsset
 import java.util.function.Consumer
 
 class ChroniclesPlugin(init: JavaPluginInit) : JavaPlugin(init) {
